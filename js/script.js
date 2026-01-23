@@ -52,8 +52,13 @@ function paint(e) {
 
 // change color
 palette.addEventListener("click", (e) => {
-    if (!e.target.dataset.mode) return;
-    currentColor = e.target.dataset.mode;
+    if (!e.target.closest("button")) return;
+    const button = e.target.closest("button");
+
+    //read the button's css background color
+    currentColor = getComputedStyle(button).backgroundColor;
+
+    //update the current color display
     currentColorMode.style.backgroundColor = currentColor;
 });
 

@@ -49,14 +49,18 @@
 #black { background-color: black; }
 #white { background-color: white; }
 #gray { background-color: #808080; }
+#brown { background-color: brown; }
 #bisque { background-color: #E0AC69; }
 
 /* primary colors */
 #red{ background-color: red; }
-#blue { background-color: #0652dd; }
+#blue { background-color: blue; }
 #yellow {background-color: yellow;}
 
 /* secondary colors */
 #green { background-color: green; }
 #purple {background-color: purple; }
 #orange {background-color: orange;}
+
+/* other color */
+#pink { background-color: pink;}
