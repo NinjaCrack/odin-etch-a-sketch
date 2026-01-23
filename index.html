@@ -9,21 +9,35 @@
 </head>
 <body>
     <div class="container">
-        <div>
+        <h1>Etch A Sketch</h1>
+        <div id="function-buttons">
              <label for="grid-size">Grid size: <span id="size-value">16 x 16</span></label>
             <input id="grid-size" type="range" min="1" max="100" value="16" />
+            <button id="grid-lines">Toggle Grid Lines</button>
+            <button id="reset-grid">Reset Grid</button>
         </div>
         <div id="palette">
-            <button>Black</button>
-            <button>Blue</button>
-            <button>Red</button>
-            <button>Green</button>
-            <button>Eraser</button>
-        </div>
-        <div id="grid-container">
-            
+            <button id="black" data-mode="black"></button>
+            <button id="white" data-mode="white"></button>
+            <button id="gray" data-mode="gray"></button>
+            <button id="bisque" data-mode="bisque"></button>
 
+            <button id="blue" data-mode="blue"></button>
+            <button id="red" data-mode="red"></button>
+            <button id="yellow" data-mode="yellow"></button>
+            
+            <button id="green" data-mode="green"></button>
+            <button id="purple" data-mode="purple"></button>
+            <button id="orange" data-mode="orange"></button>
         </div>
+        
+        <div class="currentColorMode">
+            <span>Current Color:</span> <div id="currentColorMode"></div>
+        </div>
+      
+        <!-- this where cells will be created -->
+        <div id="grid-container"></div>
+
     </div>
 </body>
 </html>
