@@ -41,8 +41,13 @@ container.addEventListener("pointermove", (e) => {
 });
 
 function paint(e) {
-    if (!e.target.classList.contains("col")) return;
-    e.target.style.backgroundColor = currentColor;
+    const x = e.clientX;
+    const y = e.clientY;
+
+    const cell = document.elementFromPoint(x, y);
+    if (!cell || !cell.classList.contains("col")) return;
+
+    cell.style.backgroundColor = currentColor;
 }
 
 // change color
