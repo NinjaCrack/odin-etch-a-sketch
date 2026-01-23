@@ -57,9 +57,10 @@ palette.addEventListener("click", (e) => {
     currentColorMode.style.backgroundColor = currentColor;
 });
 
-//set to default layout of the grid
+//reset the grid layout to default size
 const resetGrid = document.querySelector("#reset-grid").addEventListener("click", () => { 
     container.textContent = "";
+    sizeValue.textContent = `${defaultSize} x ${defaultSize}`;
     createGrid(defaultSize);
 });
 
