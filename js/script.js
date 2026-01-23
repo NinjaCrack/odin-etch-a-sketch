@@ -61,6 +61,10 @@ palette.addEventListener("click", (e) => {
 
     //update the current color display
     currentColorMode.style.backgroundColor = currentColor;
+
+     if (window.innerWidth <= 768) {
+        palette.style.display = "none";
+    }
 });
 
 //reset the grid layout to default size
@@ -82,4 +86,14 @@ const gridBg = getComputedStyle(container).backgroundColor;
 eraser.addEventListener("click", () => {
     currentColor = gridBg;
     currentColorMode.style.backgroundColor = currentColor;
+});
+
+
+
+//toggle pallete on mobile
+const paletteToggle = document.querySelector("#palette-toggle");
+
+paletteToggle.addEventListener("click", () => {
+    const isVisible = palette.style.display === "flex";
+    palette.style.display = isVisible ? "none" : "flex";
 });
