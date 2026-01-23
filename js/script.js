@@ -3,6 +3,7 @@ const gridSize = document.querySelector("#grid-size");
 const sizeValue = document.querySelector("#size-value");
 const palette = document.querySelector("#palette");
 const currentColorMode = document.querySelector("#currentColorMode");
+const toggleGridBtn = document.querySelector("#grid-line")
 
 let defaultSize = 16;
 
@@ -12,6 +13,7 @@ function createGrid(gridNum) {
     for (let i = 0; i < gridNum * gridNum; i++) {
         const colDiv = document.createElement("div");
         colDiv.classList.add("col");
+        colDiv.classList.add("show-grid");
         container.appendChild(colDiv);
     }
 }
@@ -39,9 +41,21 @@ function paint(e) {
 }
 
 // change color
-
 palette.addEventListener("click", (e) => {
     if (!e.target.dataset.mode) return;
     currentColor = e.target.dataset.mode;
     currentColorMode.style.backgroundColor = currentColor;
+});
+
+//set to default layout of the grid
+const resetGrid = document.querySelector("#reset-grid").addEventListener("click", () => { 
+    container.textContent = "";
+    createGrid(defaultSize);
+});
+
+//toggle grid lines
+toggleGridBtn.addEventListener("click", () => {
+    document.querySelectorAll(".col").forEach(cell => {
+        cell.classList.toggle("show-grid");
+    });
 });

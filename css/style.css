@@ -15,6 +15,7 @@
     flex-wrap: wrap;
     height: 80vmin;
     width: 80vmin;
+    border: 1px solid black;
 }
 .row{
     display: flex;
@@ -23,8 +24,12 @@
 .col {
     flex: 0 0 calc(100% / var(--grid-size));
     aspect-ratio: 1 / 1;
-    border: 0.5px solid black;
+    /* border: 0.5px solid black; */
+    /* outline: 1px solid #000; */
     box-sizing: border-box;
+}
+.show-grid {
+    outline: 1px solid #000;
 }
 
 /* button colors */
