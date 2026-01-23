@@ -28,15 +28,20 @@ createGrid(defaultSize);
 
 // color the grid
 let currentColor = "black";
+let isDrawing = false;
 
 container.addEventListener("dragstart", (e) => { e.preventDefault(); })
-container.addEventListener("pointerdown", paint);
-container.addEventListener("pointermove", paint);
+
+container.addEventListener("pointerdown", (e) => {isDrawing = true; paint(e) });
+
+document.addEventListener("pointerup", () => { isDrawing = false });
+container.addEventListener("pointermove", (e) => {
+    if (!isDrawing) return;
+    paint(e);
+});
 
 function paint(e) {
-    if (e.buttons !== 1) return;
     if (!e.target.classList.contains("col")) return;
-
     e.target.style.backgroundColor = currentColor;
 }
 

@@ -16,6 +16,7 @@
     height: 80vmin;
     width: 80vmin;
     border: 1px solid black;
+    touch-action: none;
 }
 .row{
     display: flex;
