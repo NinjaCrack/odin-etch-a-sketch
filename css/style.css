@@ -43,24 +43,56 @@
 #palette > button {
     width: 3rem;
     height: 3rem;
-    /* border: none; */
+    border: 1px solid black;
+    margin: 0.2rem;
+    cursor: pointer;
 }
-/* foundational colors */
-#black { background-color: black; }
-#white { background-color: white; }
-#gray { background-color: #808080; }
-#brown { background-color: brown; }
-#bisque { background-color: #E0AC69; }
 
-/* primary colors */
-#red{ background-color: red; }
-#blue { background-color: blue; }
-#yellow {background-color: yellow;}
+/* Neutrals / foundational */
+#black       { background-color: #0a0a0a; }
+#darkgray    { background-color: #4d4d4d; }
+#gray        { background-color: #8c8c8c; }
+#lightgray   { background-color: #d3d3d3; }
+#white       { background-color: #fefefe; }
+#brown       { background-color: #8b5e3c; }
+#chocolate   { background-color: #7b3f00; }
+#beige       { background-color: #f5f5dc; }
+#bisque      { background-color: #f0d1b5; }
+#tan         { background-color: #d2b48c; }
+#khaki       { background-color: #f0e68c; }
 
-/* secondary colors */
-#green { background-color: green; }
-#purple {background-color: purple; }
-#orange {background-color: orange;}
+/* Blues (dark → light) */
+#blue        { background-color: #357edd; }
+#teal        { background-color: #1abc9c; }
+#skyblue     { background-color: #a0d8ef; }
+#lightblue   { background-color: #74b9ff; }
 
-/* other color */
-#pink { background-color: pink;}
+/* Reds / Pinks */
+#red         { background-color: #d64545; }
+#rose        { background-color: #ff66a3; }
+#pink        { background-color: #f28ab2; }
+#salmon      { background-color: #fa8072; }
+#coral       { background-color: #ff7f50; }
+#magenta     { background-color: #ff6eb4; }
+
+/* Yellows / Oranges */
+#yellow      { background-color: #f4d35e; }
+#orange      { background-color: #f39c12; }
+#peach       { background-color: #ffd1b3; }
+#gold        { background-color: #ffd700; }
+
+/* Greens */
+#green       { background-color: #4caf50; }
+#lime        { background-color: #a1c349; }
+#mint        { background-color: #98ff98; }
+
+/* Purples / Lavender */
+#purple      { background-color: #9b59b6; }
+#lavender    { background-color: #c5a3ff; }
+
+/* Metals / Extras */
+#silver      { background-color: #c0c0c0; }
+
+
+
+

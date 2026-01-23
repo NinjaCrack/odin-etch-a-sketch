@@ -4,6 +4,7 @@ const sizeValue = document.querySelector("#size-value");
 const palette = document.querySelector("#palette");
 const currentColorMode = document.querySelector("#currentColorMode");
 const toggleGridBtn = document.querySelector("#grid-line")
+const eraser = document.querySelector("#eraser");
 
 let defaultSize = 16;
 
@@ -74,4 +75,11 @@ toggleGridBtn.addEventListener("click", () => {
     document.querySelectorAll(".col").forEach(cell => {
         cell.classList.toggle("show-grid");
     });
+});
+
+//eraser
+const gridBg = getComputedStyle(container).backgroundColor;
+eraser.addEventListener("click", () => {
+    currentColor = gridBg;
+    currentColorMode.style.backgroundColor = currentColor;
 });
