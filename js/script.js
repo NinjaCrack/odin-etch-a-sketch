@@ -97,3 +97,41 @@ paletteToggle.addEventListener("click", () => {
     const isVisible = palette.style.display === "flex";
     palette.style.display = isVisible ? "none" : "flex";
 });
+
+
+// save 
+function isGridEmpty() {
+    return !document.querySelector(".col[style]");
+}
+
+const saveBtn = document.querySelector("#save");
+
+saveBtn.addEventListener("click", () => {
+    const gridCells = document.querySelectorAll(".col");
+    const gridSize = Math.sqrt(gridCells.length); // assumes square grid
+    const cellSize = 20; // pixels per cell in output image
+
+    // create a temporary canvas
+    const canvasEl = document.createElement("canvas");
+    canvasEl.width = gridSize * cellSize;
+    canvasEl.height = gridSize * cellSize;
+    const ctx = canvasEl.getContext("2d");
+
+    // draw each cell
+    gridCells.forEach((cell, index) => {
+        const x = (index % gridSize) * cellSize;
+        const y = Math.floor(index / gridSize) * cellSize;
+        ctx.fillStyle = getComputedStyle(cell).backgroundColor;
+        ctx.fillRect(x, y, cellSize, cellSize);
+    });
+
+    // convert canvas to PNG and trigger download if the canvas is not empty
+    if(!isGridEmpty()){
+        const link = document.createElement("a");
+        link.download = "pixel-art.png";
+        link.href = canvasEl.toDataURL("image/png");
+        link.click();
+    } else {
+        alert("canvas is empty you can't save it!");
+    }
+});
