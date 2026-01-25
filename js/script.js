@@ -55,12 +55,19 @@ function paint(e) {
 palette.addEventListener("click", (e) => {
     if (!e.target.closest("button")) return;
     const button = e.target.closest("button");
+    
+    const paletteBtn = document.querySelectorAll(".palette-btn");
 
     //read the button's css background color
     currentColor = getComputedStyle(button).backgroundColor;
 
     //update the current color display
     currentColorMode.style.backgroundColor = currentColor;
+
+     // active color
+    paletteBtn.forEach(btn => {
+        btn.classList.toggle("selectedColor", btn === button);
+    });
 
      if (window.innerWidth <= 768) {
         palette.style.display = "none";
@@ -91,12 +98,12 @@ eraser.addEventListener("click", () => {
 
 
 //toggle pallete on mobile
-const paletteToggle = document.querySelector("#palette-toggle");
-
-paletteToggle.addEventListener("click", () => {
-    const isVisible = palette.style.display === "flex";
-    palette.style.display = isVisible ? "none" : "flex";
-});
+if (window.innerWidth <= 768) {
+    currentColorMode.addEventListener("click", () => {
+            const isVisible = palette.style.display === "flex";
+            palette.style.display = isVisible ? "none" : "flex";
+    });
+}
 
 
 // save 

@@ -1,0 +1,195 @@
+/* =========================
+   REDS (16)
+   ========================= */
+#red-01 { background-color: #2b0000; }
+#red-02 { background-color: #400000; }
+#red-03 { background-color: #5a0000; }
+#red-04 { background-color: #730000; }
+#red-05 { background-color: #8b0000; }
+#red-06 { background-color: #a31515; }
+#red-07 { background-color: #bb2a2a; }
+#red-08 { background-color: #d64545; }
+#red-09 { background-color: #e35c5c; }
+#red-10 { background-color: #ef7373; }
+#red-11 { background-color: #f58a8a; }
+#red-12 { background-color: #f9a3a3; }
+#red-13 { background-color: #fcbcbc; }
+#red-14 { background-color: #fed4d4; }
+#red-15 { background-color: #ffeaea; }
+#red-16 { background-color: #fff5f5; }
+
+/* =========================
+   ORANGES (16)
+   ========================= */
+#orange-01 { background-color: #331900; }
+#orange-02 { background-color: #4a2600; }
+#orange-03 { background-color: #663300; }
+#orange-04 { background-color: #804000; }
+#orange-05 { background-color: #994d00; }
+#orange-06 { background-color: #b35a00; }
+#orange-07 { background-color: #cc6600; }
+#orange-08 { background-color: #e67300; }
+#orange-09 { background-color: #ff8000; }
+#orange-10 { background-color: #ff9933; }
+#orange-11 { background-color: #ffad5c; }
+#orange-12 { background-color: #ffc285; }
+#orange-13 { background-color: #ffd6ad; }
+#orange-14 { background-color: #ffe8d1; }
+#orange-15 { background-color: #fff1e3; }
+#orange-16 { background-color: #fff8f2; }
+
+/* =========================
+   YELLOWS (16)
+   ========================= */
+#yellow-01 { background-color: #332b00; }
+#yellow-02 { background-color: #4d4200; }
+#yellow-03 { background-color: #665900; }
+#yellow-04 { background-color: #807000; }
+#yellow-05 { background-color: #998700; }
+#yellow-06 { background-color: #b3a000; }
+#yellow-07 { background-color: #ccb800; }
+#yellow-08 { background-color: #e6d100; }
+#yellow-09 { background-color: #ffea00; }
+#yellow-10 { background-color: #fff066; }
+#yellow-11 { background-color: #fff599; }
+#yellow-12 { background-color: #fff8bf; }
+#yellow-13 { background-color: #fffbd9; }
+#yellow-14 { background-color: #fffdf0; }
+#yellow-15 { background-color: #fffef8; }
+#yellow-16 { background-color: #fffffd; }
+
+/* =========================
+   GREENS (32)
+   ========================= */
+#green-01 { background-color: #002b14; }
+#green-02 { background-color: #003d1f; }
+#green-03 { background-color: #00502a; }
+#green-04 { background-color: #006436; }
+#green-05 { background-color: #007942; }
+#green-06 { background-color: #008e4f; }
+#green-07 { background-color: #00a35b; }
+#green-08 { background-color: #00b868; }
+#green-09 { background-color: #1acc7a; }
+#green-10 { background-color: #33d98c; }
+#green-11 { background-color: #4de59e; }
+#green-12 { background-color: #66f0b0; }
+#green-13 { background-color: #85f5c1; }
+#green-14 { background-color: #a6fad2; }
+#green-15 { background-color: #c9fde3; }
+#green-16 { background-color: #ecfff4; }
+
+#olive-01 { background-color: #1f2b00; }
+#olive-02 { background-color: #2e4000; }
+#olive-03 { background-color: #3e5500; }
+#olive-04 { background-color: #4d6a00; }
+#olive-05 { background-color: #5c8000; }
+#olive-06 { background-color: #6c9500; }
+#olive-07 { background-color: #7cab00; }
+#olive-08 { background-color: #8cc200; }
+#olive-09 { background-color: #a0d633; }
+#olive-10 { background-color: #b4e066; }
+#olive-11 { background-color: #c9eb99; }
+#olive-12 { background-color: #def5bf; }
+#olive-13 { background-color: #eefad9; }
+#olive-14 { background-color: #f6fce9; }
+#olive-15 { background-color: #fbfef4; }
+#olive-16 { background-color: #fefff9; }
+
+/* =========================
+   BLUES (32)
+   ========================= */
+#blue-01 { background-color: #001533; }
+#blue-02 { background-color: #00204d; }
+#blue-03 { background-color: #002b66; }
+#blue-04 { background-color: #003680; }
+#blue-05 { background-color: #004199; }
+#blue-06 { background-color: #004db3; }
+#blue-07 { background-color: #0058cc; }
+#blue-08 { background-color: #0064e6; }
+#blue-09 { background-color: #1a75ff; }
+#blue-10 { background-color: #4d94ff; }
+#blue-11 { background-color: #80b3ff; }
+#blue-12 { background-color: #b3d1ff; }
+#blue-13 { background-color: #d9e8ff; }
+#blue-14 { background-color: #edf4ff; }
+#blue-15 { background-color: #f7faff; }
+#blue-16 { background-color: #fcfdff; }
+
+#cyan-01 { background-color: #002b33; }
+#cyan-02 { background-color: #00404d; }
+#cyan-03 { background-color: #005566; }
+#cyan-04 { background-color: #006a80; }
+#cyan-05 { background-color: #008099; }
+#cyan-06 { background-color: #0095b3; }
+#cyan-07 { background-color: #00abcc; }
+#cyan-08 { background-color: #00c0e6; }
+#cyan-09 { background-color: #33d6ff; }
+#cyan-10 { background-color: #66e0ff; }
+#cyan-11 { background-color: #99ebff; }
+#cyan-12 { background-color: #ccefff; }
+#cyan-13 { background-color: #e6f7ff; }
+#cyan-14 { background-color: #f2fbff; }
+#cyan-15 { background-color: #f8fdff; }
+#cyan-16 { background-color: #fdffff; }
+
+/* =========================
+   PURPLES / PINKS (32)
+   ========================= */
+#purple-01 { background-color: #1a002b; }
+#purple-02 { background-color: #290040; }
+#purple-03 { background-color: #380055; }
+#purple-04 { background-color: #47006a; }
+#purple-05 { background-color: #560080; }
+#purple-06 { background-color: #650095; }
+#purple-07 { background-color: #7400ab; }
+#purple-08 { background-color: #8300c0; }
+#purple-09 { background-color: #9a33d6; }
+#purple-10 { background-color: #b266e0; }
+#purple-11 { background-color: #ca99eb; }
+#purple-12 { background-color: #e0ccf5; }
+#purple-13 { background-color: #f0e6fa; }
+#purple-14 { background-color: #f7f2fc; }
+#purple-15 { background-color: #fbf8fe; }
+#purple-16 { background-color: #fefcff; }
+
+#pink-01 { background-color: #33001a; }
+#pink-02 { background-color: #4d0026; }
+#pink-03 { background-color: #660033; }
+#pink-04 { background-color: #800040; }
+#pink-05 { background-color: #99004d; }
+#pink-06 { background-color: #b3005a; }
+#pink-07 { background-color: #cc0066; }
+#pink-08 { background-color: #e60073; }
+#pink-09 { background-color: #ff338f; }
+#pink-10 { background-color: #ff66ad; }
+#pink-11 { background-color: #ff99c9; }
+#pink-12 { background-color: #ffcce3; }
+#pink-13 { background-color: #ffe6f1; }
+#pink-14 { background-color: #fff2f8; }
+#pink-15 { background-color: #fff8fb; }
+#pink-16 { background-color: #fffdfe; }
+
+/* =========================
+   GRAYS / NEUTRALS (32)
+   ========================= */
+#gray-01 { background-color: #050505; }
+#gray-02 { background-color: #0f0f0f; }
+#gray-03 { background-color: #1a1a1a; }
+#gray-04 { background-color: #262626; }
+#gray-05 { background-color: #333333; }
+#gray-06 { background-color: #404040; }
+#gray-07 { background-color: #4d4d4d; }
+#gray-08 { background-color: #5a5a5a; }
+#gray-09 { background-color: #6a6a6a; }
+#gray-10 { background-color: #7a7a7a; }
+#gray-11 { background-color: #8a8a8a; }
+#gray-12 { background-color: #9a9a9a; }
+#gray-13 { background-color: #aaaaaa; }
+#gray-14 { background-color: #bababa; }
+#gray-15 { background-color: #cacaca; }
+#gray-16 { background-color: #dadada; }
+#gray-17 { background-color: #e5e5e5; }
+#gray-18 { background-color: #eeeeee; }
+#gray-19 { background-color: #f5f5f5; }
+#gray-20 { background-color: #fafafa; }
+#gray-21 { background-color: #ffffff; }

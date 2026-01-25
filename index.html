@@ -5,77 +5,233 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/colors.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <h1>Etch A Sketch</h1>
-        <div id="function-buttons">
+        <header id="page-header">
+            <h1><span>Hue</span> Got This</h1>
+            <p class="subtitle">Turn tiny squares into big ideas</p>
+        </header>
+
+        <div id="function-buttons" class="function-buttons">
              <label for="grid-size">Grid size: <span id="size-value">16 x 16</span></label>
             <input id="grid-size" type="range" min="1" max="100" value="16" />
-            <button id="grid-line">Toggle Grid Lines</button>
-            <button id="reset-grid">Reset Grid</button>
+            <button id="grid-line">Grid</button>
+            <button id="reset-grid">Reset</button>
             <button id="eraser">Eraser</button>
             
-            <button id="save">💾 Save</button>
+            <button id="save">Save</button>
 
         </div>
-        <div class="palette-wrapper">
-            <button id="palette-toggle">Colors ▼</button>
-            <div id="palette">
-                <!-- Neutrals / foundational -->
-                <button id="black"></button>
-                <button id="darkgray"></button>
-                <button id="gray"></button>
-                <button id="lightgray"></button>
-                <button id="white"></button>
-                <button id="brown"></button>
-                <button id="chocolate"></button>
-                <button id="beige"></button>
-                <button id="bisque"></button>
-                <button id="tan"></button>
-                <button id="khaki"></button>
-
-                <!-- Blues (dark → light) -->
-                <button id="blue"></button>
-                <button id="teal"></button>
-                <button id="skyblue"></button>
-                <button id="lightblue"></button>
-                
-                <!-- Reds / pinks -->
-                <button id="red"></button>
-                <button id="rose"></button>
-                <button id="pink"></button>
-                <button id="salmon"></button>
-                <button id="coral"></button>
-                <button id="magenta"></button>
-                
-                <!-- Yellows / oranges -->
-                <button id="yellow"></button>
-                <button id="orange"></button>
-                <button id="peach"></button>
-                <button id="gold"></button>
-                
-                <!-- Greens -->
-                <button id="green"></button>
-                <button id="lime"></button>
-                <button id="mint"></button>
-                
-                <!-- Purples / lavender -->
-                <button id="purple"></button>
-                <button id="lavender"></button>
-                
-                <!-- Metals / extras -->
-                <button id="silver"></button>
-            </div>
-        </div>
-
-
-        
         <div class="currentColorMode">
-            <span>Current Color:</span> <div id="currentColorMode"></div>
+            <span>Current Color:</span> <button id="currentColorMode"></button>
         </div>
       
+        <div class="palette-wrapper">
+            <div id="palette" class="palette">
+
+                <!-- =========================
+                    GRAYS / NEUTRALS (32)
+                    ========================= -->
+                <button id="gray-01" class="palette-btn"></button>
+                <button id="gray-02" class="palette-btn"></button>
+                <button id="gray-03" class="palette-btn"></button>
+                <button id="gray-04" class="palette-btn"></button>
+                <button id="gray-05" class="palette-btn"></button>
+                <button id="gray-06" class="palette-btn"></button>
+                <button id="gray-07" class="palette-btn"></button>
+                <button id="gray-08" class="palette-btn"></button>
+                <button id="gray-09" class="palette-btn"></button>
+                <button id="gray-10" class="palette-btn"></button>
+                <button id="gray-11" class="palette-btn"></button>
+                <button id="gray-12" class="palette-btn"></button>
+                <button id="gray-13" class="palette-btn"></button>
+                <button id="gray-14" class="palette-btn"></button>
+                <button id="gray-15" class="palette-btn"></button>
+                <button id="gray-16" class="palette-btn"></button>
+                <button id="gray-17" class="palette-btn"></button>
+                <button id="gray-18" class="palette-btn"></button>
+                <button id="gray-19" class="palette-btn"></button>
+                <button id="gray-20" class="palette-btn"></button>
+                <button id="gray-21" class="palette-btn"></button>
+
+                <!-- =========================
+                    REDS (16)
+                    ========================= -->
+                <button id="red-01" class="palette-btn"></button>
+                <button id="red-02" class="palette-btn"></button>
+                <button id="red-03" class="palette-btn"></button>
+                <button id="red-04" class="palette-btn"></button>
+                <button id="red-05" class="palette-btn"></button>
+                <button id="red-06" class="palette-btn"></button>
+                <button id="red-07" class="palette-btn"></button>
+                <button id="red-08" class="palette-btn"></button>
+                <button id="red-09" class="palette-btn"></button>
+                <button id="red-10" class="palette-btn"></button>
+                <button id="red-11" class="palette-btn"></button>
+                <button id="red-12" class="palette-btn"></button>
+                <button id="red-13" class="palette-btn"></button>
+                <button id="red-14" class="palette-btn"></button>
+                <button id="red-15" class="palette-btn"></button>
+                <button id="red-16" class="palette-btn"></button>
+
+                <!-- =========================
+                    ORANGES (16)
+                    ========================= -->
+                <button id="orange-01" class="palette-btn"></button>
+                <button id="orange-02" class="palette-btn"></button>
+                <button id="orange-03" class="palette-btn"></button>
+                <button id="orange-04" class="palette-btn"></button>
+                <button id="orange-05" class="palette-btn"></button>
+                <button id="orange-06" class="palette-btn"></button>
+                <button id="orange-07" class="palette-btn"></button>
+                <button id="orange-08" class="palette-btn"></button>
+                <button id="orange-09" class="palette-btn"></button>
+                <button id="orange-10" class="palette-btn"></button>
+                <button id="orange-11" class="palette-btn"></button>
+                <button id="orange-12" class="palette-btn"></button>
+                <button id="orange-13" class="palette-btn"></button>
+                <button id="orange-14" class="palette-btn"></button>
+                <button id="orange-15" class="palette-btn"></button>
+                <button id="orange-16" class="palette-btn"></button>
+
+                <!-- =========================
+                    YELLOWS (16)
+                    ========================= -->
+                <button id="yellow-01" class="palette-btn"></button>
+                <button id="yellow-02" class="palette-btn"></button>
+                <button id="yellow-03" class="palette-btn"></button>
+                <button id="yellow-04" class="palette-btn"></button>
+                <button id="yellow-05" class="palette-btn"></button>
+                <button id="yellow-06" class="palette-btn"></button>
+                <button id="yellow-07" class="palette-btn"></button>
+                <button id="yellow-08" class="palette-btn"></button>
+                <button id="yellow-09" class="palette-btn"></button>
+                <button id="yellow-10" class="palette-btn"></button>
+                <button id="yellow-11" class="palette-btn"></button>
+                <button id="yellow-12" class="palette-btn"></button>
+                <button id="yellow-13" class="palette-btn"></button>
+                <button id="yellow-14" class="palette-btn"></button>
+                <button id="yellow-15" class="palette-btn"></button>
+                <button id="yellow-16" class="palette-btn"></button>
+
+                <!-- =========================
+                    GREENS (32)
+                    ========================= -->
+                <button id="green-01" class="palette-btn"></button>
+                <button id="green-02" class="palette-btn"></button>
+                <button id="green-03" class="palette-btn"></button>
+                <button id="green-04" class="palette-btn"></button>
+                <button id="green-05" class="palette-btn"></button>
+                <button id="green-06" class="palette-btn"></button>
+                <button id="green-07" class="palette-btn"></button>
+                <button id="green-08" class="palette-btn"></button>
+                <button id="green-09" class="palette-btn"></button>
+                <button id="green-10" class="palette-btn"></button>
+                <button id="green-11" class="palette-btn"></button>
+                <button id="green-12" class="palette-btn"></button>
+                <button id="green-13" class="palette-btn"></button>
+                <button id="green-14" class="palette-btn"></button>
+                <button id="green-15" class="palette-btn"></button>
+                <button id="green-16" class="palette-btn"></button>
+
+                <button id="olive-01" class="palette-btn"></button>
+                <button id="olive-02" class="palette-btn"></button>
+                <button id="olive-03" class="palette-btn"></button>
+                <button id="olive-04" class="palette-btn"></button>
+                <button id="olive-05" class="palette-btn"></button>
+                <button id="olive-06" class="palette-btn"></button>
+                <button id="olive-07" class="palette-btn"></button>
+                <button id="olive-08" class="palette-btn"></button>
+                <button id="olive-09" class="palette-btn"></button>
+                <button id="olive-10" class="palette-btn"></button>
+                <button id="olive-11" class="palette-btn"></button>
+                <button id="olive-12" class="palette-btn"></button>
+                <button id="olive-13" class="palette-btn"></button>
+                <button id="olive-14" class="palette-btn"></button>
+                <button id="olive-15" class="palette-btn"></button>
+                <button id="olive-16" class="palette-btn"></button>
+
+                <!-- =========================
+                    BLUES / CYANS (32)
+                    ========================= -->
+                <button id="blue-01" class="palette-btn"></button>
+                <button id="blue-02" class="palette-btn"></button>
+                <button id="blue-03" class="palette-btn"></button>
+                <button id="blue-04" class="palette-btn"></button>
+                <button id="blue-05" class="palette-btn"></button>
+                <button id="blue-06" class="palette-btn"></button>
+                <button id="blue-07" class="palette-btn"></button>
+                <button id="blue-08" class="palette-btn"></button>
+                <button id="blue-09" class="palette-btn"></button>
+                <button id="blue-10" class="palette-btn"></button>
+                <button id="blue-11" class="palette-btn"></button>
+                <button id="blue-12" class="palette-btn"></button>
+                <button id="blue-13" class="palette-btn"></button>
+                <button id="blue-14" class="palette-btn"></button>
+                <button id="blue-15" class="palette-btn"></button>
+                <button id="blue-16" class="palette-btn"></button>
+
+                <button id="cyan-01" class="palette-btn"></button>
+                <button id="cyan-02" class="palette-btn"></button>
+                <button id="cyan-03" class="palette-btn"></button>
+                <button id="cyan-04" class="palette-btn"></button>
+                <button id="cyan-05" class="palette-btn"></button>
+                <button id="cyan-06" class="palette-btn"></button>
+                <button id="cyan-07" class="palette-btn"></button>
+                <button id="cyan-08" class="palette-btn"></button>
+                <button id="cyan-09" class="palette-btn"></button>
+                <button id="cyan-10" class="palette-btn"></button>
+                <button id="cyan-11" class="palette-btn"></button>
+                <button id="cyan-12" class="palette-btn"></button>
+                <button id="cyan-13" class="palette-btn"></button>
+                <button id="cyan-14" class="palette-btn"></button>
+                <button id="cyan-15" class="palette-btn"></button>
+                <button id="cyan-16" class="palette-btn"></button>
+
+                <!-- =========================
+                    PURPLES / PINKS (32)
+                    ========================= -->
+                <button id="purple-01" class="palette-btn"></button>
+                <button id="purple-02" class="palette-btn"></button>
+                <button id="purple-03" class="palette-btn"></button>
+                <button id="purple-04" class="palette-btn"></button>
+                <button id="purple-05" class="palette-btn"></button>
+                <button id="purple-06" class="palette-btn"></button>
+                <button id="purple-07" class="palette-btn"></button>
+                <button id="purple-08" class="palette-btn"></button>
+                <button id="purple-09" class="palette-btn"></button>
+                <button id="purple-10" class="palette-btn"></button>
+                <button id="purple-11" class="palette-btn"></button>
+                <button id="purple-12" class="palette-btn"></button>
+                <button id="purple-13" class="palette-btn"></button>
+                <button id="purple-14" class="palette-btn"></button>
+                <button id="purple-15" class="palette-btn"></button>
+                <button id="purple-16" class="palette-btn"></button>
+
+                <button id="pink-01" class="palette-btn"></button>
+                <button id="pink-02" class="palette-btn"></button>
+                <button id="pink-03" class="palette-btn"></button>
+                <button id="pink-04" class="palette-btn"></button>
+                <button id="pink-05" class="palette-btn"></button>
+                <button id="pink-06" class="palette-btn"></button>
+                <button id="pink-07" class="palette-btn"></button>
+                <button id="pink-08" class="palette-btn"></button>
+                <button id="pink-09" class="palette-btn"></button>
+                <button id="pink-10" class="palette-btn"></button>
+                <button id="pink-11" class="palette-btn"></button>
+                <button id="pink-12" class="palette-btn"></button>
+                <button id="pink-13" class="palette-btn"></button>
+                <button id="pink-14" class="palette-btn"></button>
+                <button id="pink-15" class="palette-btn"></button>
+                <button id="pink-16" class="palette-btn"></button>
+
+            </div>
+
+        </div>
+
         <!-- this where cells will be created -->
         <div id="grid-container"></div>
 

@@ -1,3 +1,29 @@
+body {
+  background-color: #fff8f0;  /* soft pastel beige */
+  color: #333;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+#page-header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#page-header h1 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #7a5f3b; /* muted pastel brown */
+  margin-bottom: 6px;
+}
+
+#page-header .subtitle {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #5c4a3d;  /* slightly darker muted brown */
+  opacity: 0.85;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -37,63 +63,35 @@
 #currentColorMode {
     width: 3rem;
     height: 3rem;
-    border: 1px solid black;
+    border: none;
     background-color: black;
+    border-radius: 50%;
+    outline: 1px solid #111;
+    outline-offset: 2px;
 }
+
 #palette > button {
     width: 3rem;
     height: 3rem;
-    border: 1px solid black;
+    outline: 1px solid #aaa;
     margin: 0.2rem;
-    cursor: pointer;
+    cursor: pointer; 
+    border: none;
+    border-radius: 50%;
 }
 
-/* Neutrals / foundational */
-#black       { background-color: #0a0a0a; }
-#darkgray    { background-color: #4d4d4d; }
-#gray        { background-color: #8c8c8c; }
-#lightgray   { background-color: #d3d3d3; }
-#white       { background-color: #fefefe; }
-#brown       { background-color: #8b5e3c; }
-#chocolate   { background-color: #7b3f00; }
-#beige       { background-color: #f5f5dc; }
-#bisque      { background-color: #f0d1b5; }
-#tan         { background-color: #d2b48c; }
-#khaki       { background-color: #f0e68c; }
-
-/* Blues (dark → light) */
-#blue        { background-color: #357edd; }
-#teal        { background-color: #1abc9c; }
-#skyblue     { background-color: #a0d8ef; }
-#lightblue   { background-color: #74b9ff; }
-
-/* Reds / Pinks */
-#red         { background-color: #d64545; }
-#rose        { background-color: #ff66a3; }
-#pink        { background-color: #f28ab2; }
-#salmon      { background-color: #fa8072; }
-#coral       { background-color: #ff7f50; }
-#magenta     { background-color: #ff6eb4; }
-
-/* Yellows / Oranges */
-#yellow      { background-color: #f4d35e; }
-#orange      { background-color: #f39c12; }
-#peach       { background-color: #ffd1b3; }
-#gold        { background-color: #ffd700; }
-
-/* Greens */
-#green       { background-color: #4caf50; }
-#lime        { background-color: #a1c349; }
-#mint        { background-color: #98ff98; }
-
-/* Purples / Lavender */
-#purple      { background-color: #9b59b6; }
-#lavender    { background-color: #c5a3ff; }
-
-/* Metals / Extras */
-#silver      { background-color: #c0c0c0; }
-
-
+.palette {
+  width: 80vmin;        /* fixed width */
+  height: 30vmin;       /* fixed height */
+  overflow-y: auto;    /* vertical scroll */
+  overflow-x: hidden; /* no horizontal scroll */
+  border: 1px solid #444;
+  /* background: #1e1e1e; */
+}
+.selectedColor {
+    outline: 3px solid #111;
+    outline-offset: 2px;
+}
 
 
 /* Default: palette visible (desktop) */
@@ -119,27 +117,88 @@
         padding: 0.3rem;
         background-color: #f9f9f9;
         border-radius: 0.3rem;
+        align-items: center;
+        justify-content: center;
     }
+    #palette > button {
+        width: 2rem;
+        height: 2rem;
+        flex: 0 0  auto;
+        
 
-    #palette-toggle {
-        display: block;
-        width: 100%;
-        padding: 0.5rem;
-        font-size: 1rem;
+    }
+    #currentColorMode {
+        width: 2rem;
+        height: 2rem;
         cursor: pointer;
-        border: 1px solid #ccc;
-        border-radius: 0.3rem;
-        background-color: #fff;
-        text-align: left;
     }
 }
 
-/* save */
-#save {
-    width: 3rem;
-    height: 3rem;
-    border: 1px solid black;
-    cursor: pointer;
-    background-color: #f0f0f0;
+/* Toolbar container */
+#function-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #fff5eb;         /* slightly lighter pastel beige than body */
+  border-bottom: 1px solid #f0e5da;  /* subtle separation */
+  border-radius: 8px;
 }
 
+/* Label */
+#function-buttons label {
+  font-size: 13px;
+  color: #6b5f55;             /* muted soft brown/gray */
+}
+
+#size-value {
+  font-weight: 500;
+  color: #3d3d3d;
+}
+
+/* Range slider */
+#grid-size {
+  width: 120px;
+  accent-color: #cfc0b3;     /* pastel taupe slider */
+  margin-right: 12px;
+}
+
+/* Buttons — pastel tones matching beige theme */
+#function-buttons button {
+  background: #f7e9df;        /* soft warm pastel */
+  color: #5c4a3d;             /* soft dark brown text */
+  border: 1px solid #e4d5c8;  /* subtle border */
+  padding: 6px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+/* Hover state */
+#function-buttons button:hover {
+  background: #efd9c6;        /* slightly deeper pastel */
+  border-color: #d6bfa9;
+}
+
+/* Active / pressed state */
+#function-buttons button:active,
+#function-buttons button.active {
+  background: #e8cbb3;
+  border-color: #c8a88d;
+  transform: translateY(1px);
+}
+
+/* Save button — subtle accent */
+#save {
+  margin-left: auto;          /* aligned right */
+  background: #fff0c8;       /* soft pastel yellow */
+  border-color: #f7e0a8;
+  color: #7a5f3b;             /* muted brown text */
+}
+
+#save:hover {
+  background: #fce8a8;
+  border-color: #f3d77f;
+}
