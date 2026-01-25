@@ -15,16 +15,20 @@
             <p class="subtitle">Turn tiny squares into big ideas</p>
         </header>
 
-        <div id="function-buttons" class="function-buttons">
-             <label for="grid-size">Grid size: <span id="size-value">16 x 16</span></label>
-            <input id="grid-size" type="range" min="1" max="100" value="16" />
-            <button id="grid-line">Grid</button>
-            <button id="reset-grid">Reset</button>
-            <button id="eraser">Eraser</button>
-            
-            <button id="save">Save</button>
+        <div id="function-buttons">
+            <div class="grid-row">
+                <label for="grid-size">Grid: <span id="size-value">16 × 16</span></label>
+                <input id="grid-size" type="range" min="1" max="100" value="16" />
+            </div>
 
+            <div class="button-row">
+                <button id="grid-line">Grid</button>
+                <button id="reset-grid">Reset</button>
+                <button id="eraser">Eraser</button>
+                <button id="save">Save</button>
+            </div>
         </div>
+
         <div class="currentColorMode">
             <span>Current Color:</span> <button id="currentColorMode"></button>
         </div>

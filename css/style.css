@@ -134,71 +134,75 @@ body {
     }
 }
 
-/* Toolbar container */
 #function-buttons {
   display: flex;
-  align-items: center;
+  flex-direction: column;       /* two rows: grid controls + buttons */
   gap: 10px;
-  padding: 10px;
-  background: #fff5eb;         /* slightly lighter pastel beige than body */
-  border-bottom: 1px solid #f0e5da;  /* subtle separation */
+  padding: 12px;
+  background: #fff5eb;          /* pastel beige toolbar */
+  border-bottom: 1px solid #f0e5da;
   border-radius: 8px;
+  max-width: 100%;
 }
 
-/* Label */
-#function-buttons label {
+/* Top row: grid label + range */
+.grid-row {
+  display: flex;
+  flex-direction: column;       /* stack label + slider vertically */
+  gap: 6px;
+}
+
+.grid-row label {
   font-size: 13px;
-  color: #6b5f55;             /* muted soft brown/gray */
+  color: #6b5f55;
 }
 
 #size-value {
   font-weight: 500;
-  color: #3d3d3d;
+  color: #5c4a3d;
 }
 
-/* Range slider */
 #grid-size {
-  width: 120px;
-  accent-color: #cfc0b3;     /* pastel taupe slider */
-  margin-right: 12px;
+  width: 100%;
+  accent-color: #cfc0b3;       /* pastel taupe */
 }
 
-/* Buttons — pastel tones matching beige theme */
-#function-buttons button {
-  background: #f7e9df;        /* soft warm pastel */
-  color: #5c4a3d;             /* soft dark brown text */
-  border: 1px solid #e4d5c8;  /* subtle border */
+/* Bottom row: buttons */
+.button-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;              /* wrap if screen is too narrow */
+}
+
+.button-row button {
+  background: #f7e9df;
+  color: #5c4a3d;
+  border: 1px solid #e4d5c8;
   padding: 6px 12px;
   font-size: 13px;
-  font-family: inherit;
-  cursor: pointer;
   border-radius: 6px;
+  cursor: pointer;
+  flex: 1 1 20%;                /* flexible width for responsiveness */
+  min-width: 80px;              /* tappable on mobile */
+  text-align: center;
   transition: all 0.15s ease;
 }
 
-/* Hover state */
-#function-buttons button:hover {
-  background: #efd9c6;        /* slightly deeper pastel */
+/* Save button accent */
+#save {
+  background: #fff0c8;
+  border-color: #f7e0a8;
+  color: #7a5f3b;
+}
+
+/* Button hover/active */
+.button-row button:hover {
+  background: #efd9c6;
   border-color: #d6bfa9;
 }
 
-/* Active / pressed state */
-#function-buttons button:active,
-#function-buttons button.active {
+.button-row button:active {
   background: #e8cbb3;
   border-color: #c8a88d;
   transform: translateY(1px);
-}
-
-/* Save button — subtle accent */
-#save {
-  margin-left: auto;          /* aligned right */
-  background: #fff0c8;       /* soft pastel yellow */
-  border-color: #f7e0a8;
-  color: #7a5f3b;             /* muted brown text */
-}
-
-#save:hover {
-  background: #fce8a8;
-  border-color: #f3d77f;
 }
