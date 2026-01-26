@@ -6,6 +6,33 @@ const currentColorMode = document.querySelector("#currentColorMode");
 const toggleGridBtn = document.querySelector("#grid-line")
 const eraser = document.querySelector("#eraser");
 
+
+//create the colors dynamically
+const paletteGroups = {
+    gray: 21,
+    red: 16,
+    orange: 16,
+    yellow: 16,
+    green: 16,
+    olive: 16,
+    blue: 16,
+    cyan: 16,
+    purple: 16,
+    pink: 16
+};
+
+for (const [color, count] of Object.entries(paletteGroups)) {
+    for (let i = 1; i <= count; i++) {
+        const button = document.createElement("button");
+        button.classList.add("palette-btn")
+
+        button.id = `${color}-${String(i).padStart(2, "0")}`;
+        palette.appendChild(button);
+    }
+}
+
+
+
 let defaultSize = 16;
 
 function createGrid(gridNum) {
