@@ -68,7 +68,7 @@ body {
     outline-offset: 2px;
 }
 
-#palette > button {
+#palette > button, #recent-palette > button {
     width: 3rem;
     height: 3rem;
     outline: 1px solid #aaa;
@@ -76,15 +76,15 @@ body {
     cursor: pointer; 
     border: none;
     border-radius: 50%;
+    flex: 0 0 auto;
 }
 
 .palette {
-  width: 80vmin;        /* fixed width */
-  height: 30vmin;       /* fixed height */
-  overflow-y: auto;    /* vertical scroll */
-  overflow-x: hidden; /* no horizontal scroll */
+  width: 80vmin;        
+  height: 30vmin;       
+  overflow-y: auto;    
+  overflow-x: hidden; 
   border: 1px solid #444;
-  /* background: #1e1e1e; */
 }
 .selectedColor {
     outline: 3px solid #111;
@@ -118,7 +118,7 @@ body {
         align-items: center;
         justify-content: center;
     }
-    #palette > button {
+    #palette > button, #recent-palette > button {
         width: 2rem;
         height: 2rem;
         flex: 0 0  auto;
@@ -203,4 +203,25 @@ body {
   background: #e8cbb3;
   border-color: #c8a88d;
   transform: translateY(1px);
+}
+
+/* recent palette  */
+.recent-palette {
+    display: flex;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    width: 80vmin;
+    height: 3.5rem;
+    
+    align-items: center;
+    opacity: 0.95;
+    overflow-x: scroll ;
+    overflow-y: hidden;
+
+
+}
+
+.recent-label {
+    font-size: 0.8rem;
+    opacity: 0.7;
 }

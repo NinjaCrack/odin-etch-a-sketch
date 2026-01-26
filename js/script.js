@@ -76,6 +76,7 @@ function paint(e) {
     if (!cell || !cell.classList.contains("col")) return;
 
     cell.style.backgroundColor = currentColor;
+    addRecentColor(currentColor);
 }
 
 // change color
@@ -99,6 +100,8 @@ palette.addEventListener("click", (e) => {
      if (window.innerWidth <= 768) {
         palette.style.display = "none";
     }
+
+    
 });
 
 //reset the grid layout to default size
@@ -169,3 +172,42 @@ saveBtn.addEventListener("click", () => {
         alert("canvas is empty you can't save it!");
     }
 });
+
+// recent colors
+const recentPalette = document.querySelector("#recent-palette");
+
+const MAX_RECENT_COLORS = 12;
+let recentColors = [];
+
+function addRecentColor(color) {
+    if (!color || color === getComputedStyle(container).backgroundColor) return;
+
+    recentColors = recentColors.filter( c => c != color);
+
+    recentColors.unshift(color);
+
+    if (recentColors.length > MAX_RECENT_COLORS) {
+        recentColors.pop();
+    }
+
+    renderRecentColors();
+}
+
+function renderRecentColors() {
+    recentPalette.innerHTML = "";
+
+    recentColors.forEach(color => {
+        const btn = document.createElement("button");
+        btn.className = "palette-btn";
+        btn.style.backgroundColor = color;
+
+        btn.addEventListener("click", () => {
+            currentColor = color;
+            currentColorMode.style.backgroundColor = color;
+        });
+
+        recentPalette.appendChild(btn);
+    });
+}
+
+
