@@ -108,6 +108,7 @@ palette.addEventListener("click", (e) => {
 const resetGrid = document.querySelector("#reset-grid").addEventListener("click", () => { 
     container.textContent = "";
     sizeValue.textContent = `${defaultSize} x ${defaultSize}`;
+    gridSize.value = defaultSize;
     createGrid(defaultSize);
 });
 
