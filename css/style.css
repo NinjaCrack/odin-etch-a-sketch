@@ -1,6 +1,7 @@
 body {
   font-family: 'Helvetica', 'Arial', sans-serif;
 }
+
 #page-header {
   text-align: center;
   margin: 20px 0;
@@ -15,52 +16,48 @@ body {
 }
 
 #page-header .subtitle {
-  font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #5c4a3d;  /* slightly darker muted brown */
   opacity: 0.85;
 }
 
-@media (max-width: 480px) {
-  #page-header {
-    margin: 12px 0 8px;       
-  }
-
-  #page-header h1 {
-    font-size: 26px;           
-    line-height: 1.15;        
-    margin-bottom: 4px;
-  }
-
-  #page-header .subtitle {
-    font-size: 14px;          
-    line-height: 1.3;
-  }
-}
-
-
-.container {
-  max-width: 1200px;
+.app-layout {
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: flex;  
   gap: 0.5rem;
+}
+
+.toolbar{
+  flex: 0 0 260px;
+}
+
+.canvas-area{
+  justify-items: center;
+  flex: 1;
+}
+
+
+#grid-container,
+.palette,
+.recent-palette {
+  width: 100%;
+  max-width: 80vmin;
 }
 
 #grid-container {
     display: flex;
     flex-wrap: wrap;
     height: 80vmin;
-    width: 80vmin;
+    /* width: 80vmin; */
     border: 1px solid black;
     touch-action: none;
     margin-bottom: 0.5rem;
     cursor: cell;
+    background-color: #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 .row{
     display: flex;
@@ -77,10 +74,16 @@ body {
 }
 
 /* button colors */
-.currentColorMode {display: flex; align-items: center; gap: 0.5rem}
+.currentColorMode {
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem;
+  padding: 10px; 
+}
+
 #currentColorMode {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     border: none;
     background-color: black;
     border-radius: 50%;
@@ -89,8 +92,8 @@ body {
 }
 
 #palette > button, #recent-palette > button {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     outline: 1px solid #aaa;
     margin: 0.2rem;
     cursor: pointer; 
@@ -101,11 +104,12 @@ body {
 
 .palette {
   width: 80vmin;        
-  height: 30vmin;       
+  height: 25vmin;       
   overflow-y: auto;    
   overflow-x: hidden; 
   border: 1px solid #444;
 }
+
 .selectedColor {
     outline: 3px solid #111;
     outline-offset: 2px;
@@ -124,55 +128,24 @@ body {
     display: none;
 }
 
-/* Mobile: hide palette by default, show toggle */
-@media (max-width: 768px) {
-    #palette {
-        display: none; /* hidden initially */
-        flex-wrap: wrap;
-        gap: 0.2rem;
-        margin-top: 0.5rem;
-        border: 1px solid #ccc;
-        padding: 0.3rem;
-        background-color: #f9f9f9;
-        border-radius: 0.3rem;
-        align-items: center;
-        justify-content: center;
-    }
-    #palette > button, #recent-palette > button {
-        width: 2rem;
-        height: 2rem;
-        flex: 0 0  auto;
-        
-
-    }
-    #currentColorMode {
-        width: 2rem;
-        height: 2rem;
-        cursor: pointer;
-    }
-}
 
 #function-buttons {
   display: flex;
-  flex-direction: column;       /* two rows: grid controls + buttons */
-  gap: 10px;
+  flex-direction: column;
+  gap: .5rem;
   padding: 12px;
-  background: #fff5eb;          /* pastel beige toolbar */
-  border-bottom: 1px solid #f0e5da;
+  margin-top: .8rem;
   border-radius: 8px;
   max-width: 100%;
+  background-color: #b3d1ff;
 }
 
-/* Top row: grid label + range */
-.grid-row {
-  display: flex;
-  flex-direction: column;       /* stack label + slider vertically */
-  gap: 6px;
-}
-
-.grid-row label {
-  font-size: 13px;
-  color: #6b5f55;
+#function-buttons > button {
+  border-radius: 10px 10px;
+  border: none;
+  padding: .5rem;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 #size-value {
@@ -182,35 +155,13 @@ body {
 
 #grid-size {
   width: 100%;
-  accent-color: #cfc0b3;       /* pastel taupe */
-}
-
-/* Bottom row: buttons */
-.button-row {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;              /* wrap if screen is too narrow */
-}
-
-.button-row button {
-  background: #f7e9df;
-  color: #5c4a3d;
-  border: 1px solid #e4d5c8;
-  padding: 6px 12px;
-  font-size: 13px;
-  border-radius: 6px;
-  cursor: pointer;
-  flex: 1 1 20%;                /* flexible width for responsiveness */
-  min-width: 80px;              /* tappable on mobile */
-  text-align: center;
-  transition: all 0.15s ease;
+  accent-color: #002b66;
 }
 
 /* Save button accent */
 #save {
-  background: #fff0c8;
-  border-color: #f7e0a8;
-  color: #7a5f3b;
+  background: #002b66;
+  color: #fff;
 }
 
 /* Button hover/active */
@@ -232,10 +183,9 @@ body {
     padding: 0.5rem;
     width: 80vmin;
     height: 2.5rem;
-    
     align-items: center;
     opacity: 0.95;
-    overflow-x: scroll ;
+    overflow-x: auto ;
     overflow-y: hidden;
 
 }
@@ -244,7 +194,55 @@ body {
     font-size: 0.8rem;
     opacity: 0.7;
 }
+
+/* Mobile: hide palette by default, show toggle */
+@media (max-width: 768px) {
+    #palette {
+        display: none; /* hidden initially */
+        flex-wrap: wrap;
+        gap: 0.2rem;
+        margin-top: 0.5rem;
+        border: 1px solid #ccc;
+        padding: 0.3rem;
+        background-color: #f9f9f9;
+        border-radius: 0.3rem;
+        align-items: center;
+        justify-content: center;
+    }
+    #palette > button, #recent-palette > button {
+        width: 1.5rem;
+        height: 1.5rem;
+        flex: 0 0  auto;
+        
+
+    }
+    #currentColorMode {
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
+    }
+}
+
 @media (max-width: 480px) {
+  #page-header {
+    margin: 12px 0 8px;       
+  }
+
+  #page-header h1 {
+    font-size: 26px;           
+    line-height: 1.15;        
+    margin-bottom: 4px;
+  }
+
+  #page-header .subtitle {
+    font-size: 14px;          
+    line-height: 1.3;
+  }
+
+  .app-layout {
+    flex-direction: column-reverse;
+  }
+
   .recent-palette {
     height: 2.5rem;          
     padding: 0.3rem 0.4rem; 

@@ -9,42 +9,50 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div class="container">
         <header id="page-header">
             <h1><span>Hue</span> Got This</h1>
             <p class="subtitle">Turn tiny squares into big ideas</p>
         </header>
 
-        <div id="function-buttons">
-            <div class="grid-row">
-                <label for="grid-size">Grid: <span id="size-value">16 × 16</span></label>
-                <input id="grid-size" type="range" min="1" max="100" value="16" />
-            </div>
+        <main class="app-layout">
+            <section role="toolbar" class="toolbar">
+                <div class="recent-wrapper">
+                    <p class="recent-label">Recent</p>
+                    <div id="recent-palette" class="recent-palette"></div>
+                </div>
 
-            <div class="button-row">
-                <button id="grid-line">Grid</button>
-                <button id="reset-grid">Reset</button>
-                <button id="eraser">Eraser</button>
-                <button id="save">Save</button>
-            </div>
-        </div>
+                <div class="currentColorMode">
+                    <span>Current Color:</span> <button id="currentColorMode"></button>
+                </div>
 
-        <div class="currentColorMode">
-            <span>Current Color:</span> <button id="currentColorMode"></button>
-        </div>
-      
-        <div class="palette-wrapper">
-            <!-- add colors dynamically -->
-            <div id="palette" class="palette"></div>
-        </div>
-        <div class="recent-wrapper">
-            <p class="recent-label">Recent</p>
-            <div id="recent-palette" class="recent-palette"></div>
-        </div>
+                <div class="palette-wrapper">
+                    <!-- add colors dynamically -->
+                    <div id="palette" class="palette"></div>
+                </div>
 
-        <!-- this where cells will be created -->
-        <div id="grid-container"></div>
+                <div id="function-buttons">
+                    
+                        <label for="grid-size">Grid: <span id="size-value">16 × 16</span></label>
+                        <input id="grid-size" type="range" min="1" max="100" value="16" />
+                    
 
-    </div>
+                    
+                        <button id="grid-line">Grid</button>
+                        <button id="reset-grid">Reset</button>
+                        <button id="eraser">Eraser</button>
+                        <button id="save">Save</button>
+                    
+                </div>
+
+                
+            </section>
+
+            <section class="canvas-area">
+                <!-- this where cells will be created -->
+                <div id="grid-container"></div>
+            </section>
+
+        </main>
+
 </body>
 </html>
